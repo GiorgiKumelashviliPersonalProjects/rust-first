@@ -2,11 +2,18 @@
 name = "first_rust"
 version = "0.1.0"
 edition = "2021"
+default-run = "first_rust" # default binary
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# cargo cmd {custom_comand_name}
+[commands]
+run = { cmd = "clear;cargo run -q" }
+file_read = { cmd = "cargo run --bin file_read -q" }
+pdf = { cmd = "cargo run --bin pdf -q" }
+pdf-run-and-benchmark = { cmd = "time cargo run --bin pdf -q" }
 
 [dependencies]
 dotenv = "0.15.0"
+printpdf = "0.5.3"
 rand = "0.8.4"
 strum = "0.24"
 strum_macros = "0.24"

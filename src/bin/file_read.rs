@@ -1,5 +1,3 @@
-// use std::fs::File;
-
 use std::fs::File;
 use std::io::{BufRead, BufReader, Write};
 
@@ -15,11 +13,14 @@ pub fn read_write_file() {
     write!(output, "Some random text").expect("Failed to write file");
 
     // read
-
     let file = File::open(path).unwrap();
     let bufered = BufReader::new(file);
 
     for line in bufered.lines() {
         print!("Line -> {}", line.unwrap());
     }
+}
+
+fn main() {
+    read_write_file();
 }

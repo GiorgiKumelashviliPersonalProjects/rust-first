@@ -76,6 +76,9 @@ fn main() {
     print_any(num_anything.combine());
     print_any(num_anything.summarize());
 
+    println!("hello");
+    println!("hello second");
+
     // let string_anything = Anything {
     //     x: String::from("x"),
     //     y: String::from("y"),
